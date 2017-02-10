@@ -1,0 +1,23 @@
+/*
+PARA LISTAR LOS PROCESOS ORACLE EJECUTANDOSE 
+*/
+>>ps -ef | grep ora_
+
+SALIDA DE EJEMPLO:
+
+  oracle 12438     1  0 18:15:40 ?         0:08 ora_ckpt_sidprod1
+  oracle 12432     1 251 18:15:40 ?        878:01 ora_dbw0_sidprod1
+  oracle 12430     1  0 18:15:40 ?         0:02 ora_pmon_sidprod1
+  oracle 12442     1  0 18:15:41 ?         0:00 ora_reco_sidprod1
+  oracle 12440     1  0 18:15:41 ?         0:01 ora_smon_sidprod1
+  oracle 12448     1  0 18:15:41 ?         0:00 ora_arc1_sidprod1
+  oracle 12446     1  0 18:15:41 ?         0:00 ora_arc0_sidprod1
+  oracle  6807  7679  0 11:21:30 pts/0     0:00 grep ora_
+  oracle 12434     1  0 18:15:40 ?         0:51 ora_dbw1_sidprod1
+  oracle 12436     1  0 18:15:40 ?         0:01 ora_lgwr_sidprod1
+  oracle 12444     1  0 18:15:41 ?         0:01 ora_cjq0_sidprod1
+
+/*
+PARA MATAR (KILL) LOS PROCESOS EJECUTANDOSE 
+*/
+>>kill -9 <NUMERO (PID) DEL PROCESO>
