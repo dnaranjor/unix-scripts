@@ -1,6 +1,6 @@
 # unix-scripts
 
-# Unix scripts that let us all rest at night
+# Unix / Linux scripts that let us all rest at night
 
 This is just an open, Internet-centric repository of all the Unix scripts I've been both developing and finding through the years as a both Oracle and Microsoft SQL Server's DBA.
 
