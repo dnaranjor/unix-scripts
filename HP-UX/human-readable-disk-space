@@ -3,6 +3,10 @@ PARA REPORTAR ESPACIO EN DISCO (human readable) en HP-UX
 EN LA LINEA DE COMANDOS:
 */
 
+RUTA CORTA (SIN PUNTO DE MONTURA): 
+df -g
+
+RUTA LARGA (PANORAMICA, INCLUYE PUNTO DE MONTURA): 
 df -Pk | awk '{ 
  if ( NR == 1 ) { next } 
  if ( NF == 6 ) { print } 
