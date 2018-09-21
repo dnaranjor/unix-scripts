@@ -1,0 +1,29 @@
+#How to check status of PostgreSQL Database Service
+
+sudo systemctl status postgresql-9.5
+
+#Output example:
+
+postgresql-9.5.service - PostgreSQL 9.5 database server
+   Loaded: loaded (/usr/lib/systemd/system/postgresql-9.5.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2018-09-21 09:17:23 EDT; 3min 17s ago
+     Docs: https://www.postgresql.org/docs/9.5/static/
+  Process: 1095 ExecStart=/usr/pgsql-9.5/bin/pg_ctl start -D ${PGDATA} -s -w -t 300 (code=exited, status=0/SUCCESS)
+  Process: 1070 ExecStartPre=/usr/pgsql-9.5/bin/postgresql95-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+ Main PID: 1111 (postgres)
+    Tasks: 7
+   CGroup: /system.slice/postgresql-9.5.service
+           ├─1111 /usr/pgsql-9.5/bin/postgres -D /var/lib/pgsql/9.5/data
+           ├─1148 postgres: logger process   
+           ├─1506 postgres: checkpointer process   
+           ├─1507 postgres: writer process   
+           ├─1508 postgres: wal writer process   
+           ├─1509 postgres: autovacuum launcher process   
+           └─1510 postgres: stats collector process   
+
+Sep 21 09:17:12 osboxes systemd[1]: Starting PostgreSQL 9.5 database server...
+Sep 21 09:17:13 osboxes pg_ctl[1095]: pg_ctl: another server might be runni...ay
+Sep 21 09:17:16 osboxes pg_ctl[1095]: < 2018-09-21 09:17:16.018 EDT >LOG:  ...ss
+Sep 21 09:17:16 osboxes pg_ctl[1095]: < 2018-09-21 09:17:16.018 EDT >HINT: ...".
+Sep 21 09:17:23 osboxes systemd[1]: Started PostgreSQL 9.5 database server.
+Hint: Some lines were ellipsized, use -l to show in full.
