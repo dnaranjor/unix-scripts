@@ -11,3 +11,5 @@ find . -type f -exec grep "example" '{}' \; -print
 #Before the implementation of the -exec option, this kind of command might have used the xargs command to generate a similar output:
 
 find . -type f -print | xargs grep "example"
+
+# Contenido extraido del link: https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line/
