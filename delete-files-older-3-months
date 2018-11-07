@@ -1,0 +1,11 @@
+# If you want exact number of days for 3 months then you can use:
+
+days=$(( ( $(date '+%s') - $(date -d '3 months ago' '+%s') ) / 86400 ))
+
+#and use it as:
+
+find [DIRECTORY, e.g. /tmp/*.log] -mtime +$days -type f -delete
+
+#Or directly in find:
+
+find [DIRECTORY, e.g. /tmp/*.log] -type f \ -mtime "+$(( ( $(date '+%s') - $(date -d '3 months ago' '+%s') ) / 86400 ))" -delete
