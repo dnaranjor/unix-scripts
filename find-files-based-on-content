@@ -1,6 +1,10 @@
-#The find command is only able to filter the directory hierarchy based on a file’s name and meta data. If you need to search based on the content of the file, use a tool like grep. Consider the following example:
+# The find command is only able to filter the directory hierarchy based on a file’s name and meta data. If you need to search based on the content of the file, use a tool like grep. Consider the following example:
 
 find . -type f -exec grep "example" '{}' \; -print
+
+# Usando unicamente GREP
+
+grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 #This searches every object in the current directory hierarchy (.) that is a file (-type f) and then runs the command
 #grep "example" for every file that satisfies the conditions. The files that match are printed on the screen 
