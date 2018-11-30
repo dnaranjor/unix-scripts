@@ -1,0 +1,39 @@
+# When you are running out of disk space, you need to concentrate on the biggest files and folders on your disk,
+# so you can get space quickly.
+# The best way, is to list the first 10 folders, then go inside some of them, and find files you may or can delete, 
+# and get new free space.
+#
+# Commands needed
+# There is not a single command in Linux to help us with this task, but we will use du, sort and head.
+#
+# du Summarize disk usage of each FILE, recursively for directories. 
+# sort Write sorted concatenation of all FILE(s) to standard output. 
+# head Print the first 10 lines of each FILE to standard output. 
+# With more than one FILE, precede each with a header giving the file name. With no FILE, or when FILE is -, read standard input.
+
+# Find biggest top 10 folders in your disk
+
+du -hs */ | sort -nr | head
+
+# This will give you the biggest folders in the disk, then you can enter inside one of them, preferable the biggest ones.
+
+# Find the biggest files inside folders
+
+ls -lS | head
+
+# That is, you now have the biggest files in that folder.
+
+# Find biggest files in any folder recursively
+# We’ll now use find, to find only files, and then sort, to have only the biggest files listed.
+
+find -type f -ls | sort -k 7 -r -n | head -5
+
+# find helps us list only files and not folders, then sort using the column 7 (the column with the file size) 
+# we sort using -n numeric order and -r reverse order (from biggest to smallest), and finally only the 
+# first 5 files in the current folder, and sub-folders.
+
+# You can use this way
+
+find / -type f -ls | sort -k 7 -r -n | head -5
+
+# And that will work, for all disk from root.
