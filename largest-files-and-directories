@@ -13,7 +13,7 @@
 
 # Find biggest top 10 folders in your disk
 
-du -hs */ | sort -nr | head
+du -sh * | grep G | sort -n
 
 # This will give you the biggest folders in the disk, then you can enter inside one of them, preferable the biggest ones.
 
