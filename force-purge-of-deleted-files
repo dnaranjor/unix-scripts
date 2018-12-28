@@ -1,0 +1,6 @@
+# En ocasiones nos encontramos con que los servicios de nuestro servidor han dejado de responder o lo hacen mal. 
+# Una causa bastante común de esto es que el disco duro se ha quedado sin espacio por archivos que fueron borrados
+# y que continuan estando tomados por algun proceso que no permite su purga correcta.
+# La solucion aplicada se encuentra detallada en el siguiente link:
+
+https://www.rdadmin.com/liberar_espacio_en_disco_taller_linux/
