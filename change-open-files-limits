@@ -1,0 +1,15 @@
+# To check how many open files a particular user has:
+
+lsof | grep ' user ' | awk '{print $NF}' | sort | wc -l
+
+# To modify the amount set by default in the OS:
+
+# Edit the configuracion file limits: 
+ 
+nano /etc/security/limits.conf
+ 
+limits.conf
+"user"        -       nofile  200000
+"user"        -       nproc   200000
+* soft nofile 100000
+* hard nofile 100000
