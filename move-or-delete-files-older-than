@@ -1,0 +1,21 @@
+# Como resultado, se eliminaran del directorio en el cual se encuentra TODOS los archivos, excepto los *.log
+
+find . -type f ! -name '*.log' -execdir rm {} +
+	
+# Si se desea confirmacion del borrado de cada archivo, agregar al comando rm el switch "-i"
+# Si NO se desea confirmacion del borrado de cada archivo, agregar al comando rm el switch "-f"
+# Para borrar archivos de mas de 30 dias: 
+
+find directorio_de_interes -mtime +30 -exec rm {} \;
+
+# Para listar detalles de archivos de mas de 30 dias: 
+
+find directorio_de_interes -mtime +30 -exec  ls -ltrh  {} \;
+
+# Para mover los archivos de mas de 30 dias: 
+
+find directorio_de_interes -mtime +30 -exec  mv {} directorio_de_destino_cerrando_con_slash \;
+
+# Para ver donde estan los archivos mas pesados usando DU: 
+
+du -ah ..DIR.. | grep -v "/$" | sort -rh
