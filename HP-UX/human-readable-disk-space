@@ -6,6 +6,10 @@ EN LA LINEA DE COMANDOS:
 RUTA CORTA (SIN PUNTO DE MONTURA): 
 df -g
 
+CON TABULADORES, SIMPLE:
+
+df -Ph | column -t
+
 RUTA LARGA (PANORAMICA, INCLUYE PUNTO DE MONTURA): 
 df -Pk | awk '{ 
  if ( NR == 1 ) { next } 
