@@ -1,0 +1,15 @@
+# To identify a process issued by some command that crashed and left a folder occupied with orphan files try:
+
+lsof +L1 | grep <FOLDER>
+
+# The output will look like this:
+
+mysqldump  3272 root  cwd       DIR              253,2           0    2490370 /Respaldos/DB/backup/2019-05-14 (deleted)
+gzip       3273 root  cwd       DIR              253,2           0    2490370 /Respaldos/DB/backup/2019-05-14 (deleted)
+gzip       3273 root    1w      REG              253,2 20996898816    2490372 /Respaldos/DB/backup/2019-05-14/2019-05-14.centreon01.centreon_storage.gz (deleted)
+
+# Then, kill the orphan process:
+
+kill -9 <PID>, where, in this case, PID = 3273
+
+# This will free up the disk space occupied by the orphan file
