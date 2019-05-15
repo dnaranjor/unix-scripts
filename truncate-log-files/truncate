@@ -1,0 +1,8 @@
+# Clear contents of a file with truncate
+
+truncate -s 0 file
+
+# This is useful e.g for log clearing files. This is better than manually deleting a file and maybe doing a touch for the new one. 
+The truncation process basically removes all the contents of the file. It does not remove the file itself, but it leaves it on
+the disk as a zero byte file. As an example, let's clear our /var/log/syslog to 0 bytes using truncate.
+
