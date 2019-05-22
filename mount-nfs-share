@@ -1,0 +1,7 @@
+# To mount an NFS external share, try:
+
+mount -t nfs 192.168.1.1:/external_mountpoint_provided /mnt/local_folder
+
+# To check if it was mounted, try:
+
+mount -t nfs
