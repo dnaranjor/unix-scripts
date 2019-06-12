@@ -1,0 +1,22 @@
+# To know how many inodes each partition has,
+
+df -i
+
+# as a result,
+
+[root@eserver-ppltransbank var]# df -i
+Filesystem             Inodes   IUsed    IFree IUse% Mounted on
+/dev/mapper/vg_vvirtual01-lv_root
+                      1966080    7011  1959069    1% /
+tmpfs                 1781325       1  1781324    1% /dev/shm
+/dev/sda1               65536      39    65497    1% /boot
+/dev/mapper/vg_vvirtual01-lv_home
+                       327680    4082   323598    2% /home
+/dev/mapper/vg_vvirtual01-opt
+                       655360      12   655348    1% /opt
+/dev/mapper/vg_vvirtual01-tmp
+                       655360      83   655277    1% /tmp
+/dev/mapper/vg_vvirtual01-lv_usr
+                       655360   54168   601192    9% /usr
+/dev/mapper/vg_vvirtual01-lv_var
+                       655360  583148    72212   89% /var
