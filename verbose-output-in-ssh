@@ -1,0 +1,6 @@
+# To obtain a verbose output in SSH connections:
+#
+
+ssh -vv root@10.255.32.12 -p 22
+
+
