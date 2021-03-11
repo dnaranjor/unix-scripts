@@ -1,0 +1,1 @@
+find /DIRECTORIO/ -name "*.yml" -print | xargs sed -i "s/mas-00050/mas-00051/g"
